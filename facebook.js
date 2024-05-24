@@ -1,4 +1,4 @@
-import 'app.css';
+// import 'app.css';
 
 // Nếu cần sét giờ chạy tool thì dùng đống này
 const date = new Date();
@@ -6,11 +6,12 @@ const hour = date.getHours();
 const minutes = date.getMinutes();
 
 // Thêm Css cho web
-const styleUrl = chrome.runtime.getURL('styles.css');
-const link = document.createElement('link');
-link.rel = 'stylesheet';
-link.href = styleUrl;
-document.head.appendChild(link);
+
+// const styleUrl = chrome.runtime.getURL('styles.css');
+// const link = document.createElement('link');
+// link.rel = 'stylesheet';
+// link.href = styleUrl;
+// document.head.appendChild(link);
 
 // Chạy hàm xử lý chính
 // if (hour < 12 || (hour >= 14 && hour < 17) ) {
