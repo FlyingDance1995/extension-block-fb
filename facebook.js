@@ -6,6 +6,7 @@ const hour = date.getHours();
 const minutes = date.getMinutes();
 
 // Thêm Css cho web
+
 // const styleUrl = chrome.runtime.getURL('styles.css');
 // const link = document.createElement('link');
 // link.rel = 'stylesheet';
