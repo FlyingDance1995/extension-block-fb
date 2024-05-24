@@ -1,33 +1,32 @@
-// {
-//   "name": "Cai nghiện",
-//   "description": "Tiện ích chống nghiện Facebook",
-//   "version": "0.0.1",
-//   "manifest_version": 2,
-//   "permissions": [
-//     "cookies",
-//     "tabs",
-//     "storage",
-//     "activeTab",
-//     "http://*/",
-//     "https://*/"
-//   ],
-//   "browser_action": {
-//     "default_title": "Assistant",
-//     "default_icon": "icon.png",
-//     "default_popup": "popup.html"
-//   },
-//   "background": {
-//     "scripts": [
-//       "background.js"
-//     ]
-//   }
-// }
-
 {
   "manifest_version": 3,
   "name": "Cai nghiện Phở Bò",
-  "version": "0.1",
+  "version": "1.0",
+  "description": "Extension giúp bạn cai nghiện Phở Bò",
+  "permissions": [
+    "activeTab",
+    "scripting",  
+    "tabs", 
+    "declarativeNetRequest",
+    "cookies",
+    "storage",
+    "activeTab"
+  ],
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["facebook.js"]
+    }
+  ]
 }
